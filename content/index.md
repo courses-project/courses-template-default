@@ -8,6 +8,9 @@ layout:
 
 This template is based on [Bulma css](https://bulma.io/). The official courses [documentation page](http://antonmeskildsen.github.io/courses) also uses this template.
 
+## Template files
+
+...
 
 ## Built-in shortcodes
 
