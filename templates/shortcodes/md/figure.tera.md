@@ -1,0 +1,1 @@
+\![{{caption | default(value='')}}]({{project.url_prefix}}/resources/{{url}})

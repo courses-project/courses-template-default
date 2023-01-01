@@ -1,0 +1,33 @@
+url_prefix: /courses
+katex_output: true
+
+custom:
+  crates:
+    cdoc: https://crates.io/crates/cdoc
+    courses: https://crates.io/crates/courses
+
+repository:
+  url: https://github.com/antonmeskildsen/courses/tree/main/docs
+
+outputs:
+  - html
+  - notebook
+
+parsers:
+  html:
+    settings:
+      solutions: false
+      notebook_outputs: true
+    preprocessors:
+      - type: shortcodes
+      - type: katex
+    event_processors:
+      - type: code_split
+  notebook:
+    settings:
+      solutions: false
+      notebook_outputs: true
+    preprocessors:
+      - type: shortcodes
+    event_processors:
+      - type: code_split
