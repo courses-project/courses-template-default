@@ -33,7 +33,7 @@ Produces a figure for the webpage and a regular markdown image for the notebook.
 For notebooks, this shortcode produces a regular markdown image code. The template code is:
 
 ```markdown
-\![{{caption}}]({{project.url_prefix}}/resources/{{url}})
+[{{caption}}]({{project.url_prefix}}/resources/{{url}})
 ```
 
 ### Message

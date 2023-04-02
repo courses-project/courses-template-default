@@ -18,16 +18,16 @@ parsers:
     settings:
       solutions: false
       notebook_outputs: true
-    preprocessors:
+    md_processors:
       - type: shortcodes
       - type: katex
-    event_processors:
-      - type: code_split
+    ast_processors:
+      - type: exercises
   notebook:
     settings:
       solutions: false
       notebook_outputs: true
-    preprocessors:
+    md_processors:
       - type: shortcodes
-    event_processors:
-      - type: code_split
+    ast_processors:
+      - type: exercises
