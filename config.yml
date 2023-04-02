@@ -1,10 +1,7 @@
-url_prefix: /courses
+url_prefix: /
 katex_output: true
 
-custom:
-  crates:
-    cdoc: https://crates.io/crates/cdoc
-    courses: https://crates.io/crates/courses
+
 
 repository:
   url: https://github.com/antonmeskildsen/courses/tree/main/docs
