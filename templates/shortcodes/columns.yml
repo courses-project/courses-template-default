@@ -1,0 +1,14 @@
+name: Columns
+description: Creates a column structure. Currently only does something for html.
+
+type: shortcode
+shortcode:
+  kind: block
+
+templates:
+  html: !String |
+    <div class="columns">
+        {{ body | safe }}
+    </div>
+  markdown: !String ""
+  latex: !String ""

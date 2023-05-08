@@ -1,0 +1,22 @@
+name: Link
+description: A basic link.
+
+type: shortcode
+shortcode:
+  kind: inline
+  parameters:
+    - name: text
+      description: Link text.
+      type: regular
+    - name: url
+      description: Path to the image relative to the 'resources' directory.
+      type: regular
+
+
+templates:
+  html: !String |
+    <a href="{{ config.url_prefix }}/{{ url }}.html">{{ text }}</a>
+  markdown: !String |
+    {{ text }}
+  latex: !String |
+    {{ text }}

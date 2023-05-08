@@ -1,0 +1,27 @@
+name: Note
+description: Note box.
+
+type: shortcode
+shortcode:
+  kind: block
+  parameters:
+    - name: spec
+      description: Column spec (Bulma css col spec class).
+      type: regular
+    - name: class
+      description: Note color.
+      type: !choice [ primary, success, warning, info, danger ]
+    - name: width
+      description: Css width property.
+      type: regular
+    - name: float
+      description: Css float property.
+      type: regular
+
+templates:
+  html: !String |
+    <div style="float: {{ float | default(value='none') }}; width: {{ width | default(value='auto') }}" class="notification {% if class %}is-{{ class }}{% endif %} is-light"><p>{{ body | safe }}</p></div>
+  markdown: !String |
+    **Note:** {{ body | safe }}
+  latex: !String |
+    \begin{note}{{ "{" }}{{class}}{{ "}" }} {{body | safe}}\end{note}

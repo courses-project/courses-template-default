@@ -1,0 +1,19 @@
+name: Column
+description: Creates a single. Currently only does something for html.
+
+type: shortcode
+shortcode:
+  kind: block
+  parameters:
+    - name: spec
+      description: Column spec (Bulma css col spec class).
+      type: regular
+
+
+templates:
+  html: !String |
+    <div class="column {% if spec %}{{ spec }}{% endif %}">
+        {{ body | safe }}
+    </div>
+  markdown: !String ""
+  latex: !String ""

@@ -1,0 +1,25 @@
+name: Block
+description: Bulma css block. Currently only does something for html.
+
+type: shortcode
+shortcode:
+  kind: inline
+  parameters:
+    - name: float
+      description: Css float property.
+      type: regular
+    - name: width
+      description: Css width property.
+      type: regular
+
+templates:
+  html: !String |
+    <div style="float: {{ float | default(value='none') }}; width: {{ width | default(value='100%') }}; justify-content: {{ justify | default(value='start') }}" class="block is-clearfix">
+    {{ body | safe }}
+    </div>
+  markdown: !String |
+    <div style="float: {{ float | default(value='none') }}; width: {{ width | default(value='100%') }}; justify-content: {{ justify | default(value='start') }}" class="block is-clearfix">
+    {{ body | safe }}
+    </div>
+  latex: !String |
+    {{ body | safe }}

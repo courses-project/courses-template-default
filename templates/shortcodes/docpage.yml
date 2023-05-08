@@ -1,0 +1,12 @@
+name: Documentation page
+description: Creates the documentation page for all templates.
+
+type: shortcode
+shortcode:
+  kind: inline
+
+
+templates:
+  html: !File docpage.tera.html
+  markdown: !String ""
+  latex: !String ""

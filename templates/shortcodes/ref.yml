@@ -1,0 +1,19 @@
+name: Reference
+description: Document reference.
+
+type: shortcode
+shortcode:
+  kind: inline
+  parameters:
+    - name: id
+      description: Reference shortcode id.
+      type: regular
+
+
+templates:
+  html: !String |
+    <a href="#{{ id }}">{{ id_map[id][1].name | capitalize }} {{ id_map[id][0] }}</a>
+  markdown: !String |
+    <a href="#{{ id }}">{{ id_map[id][1].name | capitalize }} {{ id_map[id][0] }}</a>
+  latex: !String |
+    \cref{ {{id}} }
